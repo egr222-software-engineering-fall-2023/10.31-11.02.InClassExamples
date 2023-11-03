@@ -20,4 +20,9 @@ public class Point3D extends Point{
             return false;
         }
     }
+
+    @Override
+    public int hashCode() {
+        return 31513 * super.hashCode() + z;
+    }
 }

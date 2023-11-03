@@ -12,6 +12,11 @@ public class Point3D extends Point{
     }
 
     @Override
+    public int hashCode() {
+        return 31513 * super.hashCode() + z;
+    }
+
+    @Override
     public boolean equals(Object o) {                       // Good implementation
         if (o != null && getClass() == o.getClass()) {      // Checks for NULL and then uses getClass() to compare TYPE
             Point3D other = (Point3D) o;
